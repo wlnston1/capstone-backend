@@ -32,7 +32,7 @@ mongoose
   .then(() => console.log("MongoDB Connected"))
   .catch((err) => console.log(err))
   .then(() => {
-    app.listen(PORT, function () {
+    app.listen(port, function () {
       console.log("Server is running on Port: " + port);
     });
   });

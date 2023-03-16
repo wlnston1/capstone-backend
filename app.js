@@ -5,11 +5,11 @@ const routes = require("./routes");
 const cors = require("cors");
 const PORT = 8888;
 
-const mongoDB = "mongodb://localhost:27017/dashboard";
 
 const app = express();
 
 const corsOptions = {
+  // TODO - later since I need to check server first 
   origin: "http://localhost:3000",
   credentials: true, //access-control-allow-credentials:true
   optionSuccessStatus: 200,
@@ -36,3 +36,5 @@ mongoose
       console.log("Server is running on Port: " + port);
     });
   });
+
+  where is compass ? du

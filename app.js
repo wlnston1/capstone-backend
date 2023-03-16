@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const routes = require("./routes");
@@ -20,7 +21,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/api", routes);
 const port = process.env.PORT || 8888;
 mongoose
-  .connect(mongoDB, { useNewUrlParser: true })
+  .connect(process.env.MONGODB_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
   .then(() => console.log("MongoDB Connected"))
   .catch((err) => console.log(err))
   .then(() => {

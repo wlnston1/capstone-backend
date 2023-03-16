@@ -18,7 +18,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use("/api", routes);
-
+const port = process.env.PORT || 8888;
 mongoose
   .connect(mongoDB, { useNewUrlParser: true })
   .then(() => console.log("MongoDB Connected"))

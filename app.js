@@ -9,9 +9,9 @@ const app = express();
 
 const corsOptions = {
   // TODO - later since I need to check server first
-  origin: "https://fabulous-parfait-f32813.netlify.app/",
+  origin: "*",
   credentials: true, //access-control-allow-credentials:true
-  optionSuccessStatus: 200,
+  optionSuccessStatus: 204,
 };
 app.use(cors(corsOptions));
 app.use(express.json());

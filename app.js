@@ -9,7 +9,7 @@ const app = express();
 
 const corsOptions = {
   // TODO - later since I need to check server first
-  origin: "https://dashboard-app.herokuapp.com/",
+  origin: "https://fabulous-parfait-f32813.netlify.app/",
   credentials: true, //access-control-allow-credentials:true
   optionSuccessStatus: 200,
 };
